@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking Chatbot</title>
-    <style>
+    <!-- <style>
         body {
             margin: 0;
             padding: 0;
@@ -81,11 +81,11 @@
             from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
-    </style>
+    </style> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Flight Booking Chatbot</h1>
+    <!-- <h1>Flight Booking Chatbot</h1>
     <p>Embark on your next journey with ease! Our smart chatbot makes finding and booking flights a breeze, tailored just for you.</p>
     <a href="#" class="start-button">Start Booking Now</a>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
@@ -94,6 +94,22 @@
       chat-title="Flight-AI"
       agent-id="aa6c373d-dc44-44a6-ae86-ee453b329594"
       language-code="en"
-    ></df-messenger>
+    ></df-messenger> -->
+    
+<script>
+  (function(d,t) {
+    var BASE_URL="http://localhost:3000";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: '8SyRAhxM5burY8dcxReD8j4T',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
 </body>
 </html>
